@@ -2,7 +2,6 @@ package ru.smartjava.servlet;
 
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.smartjava.controller.PostController;
-import ru.smartjava.service.PostService;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
