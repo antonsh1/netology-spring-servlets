@@ -1,6 +1,7 @@
 package ru.smartjava.controller;
 
 import com.google.gson.Gson;
+import org.springframework.stereotype.Controller;
 import ru.smartjava.model.Post;
 import ru.smartjava.service.PostService;
 
@@ -9,6 +10,7 @@ import java.io.IOException;
 import java.io.Reader;
 import java.util.Optional;
 
+@Controller
 public class PostController {
     public static final String APPLICATION_JSON = "application/json";
     private final PostService service;

@@ -1,11 +1,13 @@
 package ru.smartjava.service;
 
+import org.springframework.stereotype.Service;
 import ru.smartjava.model.Post;
 import ru.smartjava.repository.PostRepository;
 
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class PostService {
     private final PostRepository repository;
 

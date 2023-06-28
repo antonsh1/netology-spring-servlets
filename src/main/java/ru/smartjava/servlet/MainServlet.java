@@ -1,7 +1,7 @@
 package ru.smartjava.servlet;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import ru.smartjava.controller.PostController;
-import ru.smartjava.repository.PostRepository;
 import ru.smartjava.service.PostService;
 
 import javax.servlet.http.HttpServlet;
@@ -10,12 +10,11 @@ import javax.servlet.http.HttpServletResponse;
 
 public class MainServlet extends HttpServlet {
     private PostController controller;
+    private final AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext("ru.smartjava");
 
     @Override
     public void init() {
-        final var repository = new PostRepository();
-        final var service = new PostService(repository);
-        controller = new PostController(service);
+        controller = context.getBean(PostController.class);
     }
 
     @Override

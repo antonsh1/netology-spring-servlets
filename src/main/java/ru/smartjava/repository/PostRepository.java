@@ -10,28 +10,16 @@ import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.Collectors;
 
 // Stub
-public class PostRepository {
+public interface PostRepository {
 
     ConcurrentHashMap<Long, Post> repo = new ConcurrentHashMap<>();
     AtomicLong index = new AtomicLong(0);
 
-    public List<Post> all() {
-        return new ArrayList<>(repo.values());
-    }
+    public List<Post> all();
 
-    public Optional<Post> getById(long id) {
-        return Optional.ofNullable(repo.get(id));
-    }
+    public Optional<Post> getById(long id);
 
-    public Post save(Post post) {
-        if (post.getId() == 0) {
-            post.setId(index.addAndGet(1));
-        }
-        repo.put(post.getId(), post);
-        return post;
-    }
+    public Post save(Post post);
 
-    public void removeById(long id) {
-        repo.remove(id);
-    }
+    public void removeById(long id);
 }
