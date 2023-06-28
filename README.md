@@ -1,5 +1,5 @@
-### Домашнее задание к занятию «2.1. Servlet Containers»
+### Домашнее задание к занятию «2.2. Dependency Lookup, Dependency Injection, IoC, Spring, Application Context»
 
-## CRUD
+## Annotation Config
 
-[Ссылка на задание](https://github.com/netology-code/jspr-homeworks/tree/master/04_servlets)
+[Ссылка на задание](https://github.com/netology-code/jspr-homeworks/tree/master/05_di)
